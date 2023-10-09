@@ -6,3 +6,18 @@ Content-Type: application/json
   "description": "novo video",
   "duration": 180
 }
+
+###
+
+GET http://localhost:3333/videos
+
+###
+
+PUT http://localhost:3333/videos/6012aebc-ba2f-49b2-a45a-a5193539e433
+Content-Type: application/json
+
+{
+  "title": "Novo video2",
+  "description": "novo video2",
+  "duration": 180
+}
