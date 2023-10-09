@@ -17,8 +17,10 @@ server.post('/videos', (req, res) => {
   return res.status(201).send()
 })
 
-server.get('/videos', () => {
-  const videos = database.list();
+server.get('/videos', (req) => {
+  const { search } = req.query
+
+  const videos = database.list(search);
 
   return videos
 })
